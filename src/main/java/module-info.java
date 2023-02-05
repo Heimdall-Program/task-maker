@@ -5,4 +5,6 @@ module com.example.taskmaker {
 
     opens com.example.taskmaker to javafx.fxml;
     exports com.example.taskmaker;
+    exports com.example.taskmaker.Controllers;
+    opens com.example.taskmaker.Controllers to javafx.fxml;
 }
