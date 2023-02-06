@@ -45,6 +45,7 @@ public class testSellect {
 
     @FXML
     void choose() {
+        //сохранение в static переменную нажатого теста. Переход, только если выбран тест.
         openNewScene("startWindow.fxml", "");//поставить название конкретного теста
         chooseButton.getScene().getWindow().hide();
     }

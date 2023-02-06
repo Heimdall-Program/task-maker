@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="530.0" prefWidth="857.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taskmaker.Controllers.testResult">
+    <TableView fx:id="table" layoutX="45.0" layoutY="61.0" prefHeight="345.0" prefWidth="766.0">
+        <columns>
+            <TableColumn fx:id="num" prefWidth="42.400028228759766" text="№"/>
+            <TableColumn fx:id="question" prefWidth="409.59996032714844" text="Вопрос"/>
+            <TableColumn fx:id="correct" minWidth="3.99993896484375" prefWidth="96.0" text="Верность"/>
+            <TableColumn fx:id="yourAnswer" minWidth="3.99993896484375" prefWidth="88.79998779296875"
+                         text="Ваш ответ"/>
+            <TableColumn fx:id="rightAnswer" prefWidth="131.20001220703125" text="Правильный ответ"/>
+        </columns>
+    </TableView>
+    <Label layoutX="377.0" layoutY="20.0" text="Результаты">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Label>
+    <Label fx:id="results" layoutX="45.0" layoutY="429.0" text="Итого:">
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Label>
+    <Button fx:id="menu" layoutX="395.0" layoutY="480.0" mnemonicParsing="false" onAction="#menuButton"
+            text="Меню"/>
+</AnchorPane>

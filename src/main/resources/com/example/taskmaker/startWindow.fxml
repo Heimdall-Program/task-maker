@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="420.0" style="-fx-background-color: bisque;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taskmaker.Controllers.startWindow">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0"
+            prefWidth="355.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taskmaker.Controllers.startWindow">
     <cursor>
-        <Cursor fx:constant="DEFAULT" />
+        <Cursor fx:constant="DEFAULT"/>
     </cursor>
-    <Button fx:id="teachButton" layoutX="110.0" layoutY="113.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#teach" style="-fx-background-color: #A7C7EB; -fx-border-color: black; -fx-border-radius: 3;" text="Учиться">
+    <Button fx:id="teachButton" layoutX="78.0" layoutY="115.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false"
+            onAction="#teach" text="Учиться">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button fx:id="correctButton" layoutX="110.0" layoutY="189.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#correct" style="-fx-background-color: #A7C7EB; -fx-border-color: black; -fx-border-radius: 3;" text="Корректировать тесты">
+    <Button fx:id="correctButton" layoutX="78.0" layoutY="191.0" minHeight="40.0" minWidth="200.0"
+            mnemonicParsing="false" onAction="#correct" text="Корректировать тесты">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button layoutX="110.0" layoutY="265.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: #A7C7EB; -fx-border-color: black; -fx-border-radius: 3;" text="Выход">
+    <Button layoutX="78.0" layoutY="267.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#exit"
+            text="Выход">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Label layoutX="178.0" layoutY="43.0" text="Тесты">
+    <Label layoutX="146.0" layoutY="45.0" text="Тесты">
         <font>
-            <Font size="24.0" />
+            <Font size="24.0"/>
         </font>
     </Label>
 </AnchorPane>

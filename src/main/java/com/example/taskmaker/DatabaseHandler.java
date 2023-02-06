@@ -7,7 +7,6 @@ import java.sql.*;
 
 public class DatabaseHandler {
     public static Connection getDbConnection() throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
         return DriverManager.getConnection("jdbc:mysql://localhost:3306/taskmakerdb", "root", "root");
     }
 
@@ -20,4 +19,5 @@ public class DatabaseHandler {
         }
         return list;
     }
+
 }

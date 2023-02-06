@@ -2,7 +2,7 @@ package com.example.taskmaker;
 
 public class Test {
     int kol;
-    int numberOfRightQuastions;
+    int numberOfRightQuestions;
     Question[] arrOfQuestions;
     int idtests;
     String name;
@@ -14,7 +14,7 @@ public class Test {
         this.name = name;
         this.kol = kol;
         this.type = type;
-        this.issorted=issorted;
+        this.issorted = issorted;
     }
 
     public String getIssorted() {
@@ -41,12 +41,12 @@ public class Test {
         this.kol = kol;
     }
 
-    public int getNumberOfRightQuastions() {
-        return numberOfRightQuastions;
+    public int getNumberOfRightQuestions() {
+        return numberOfRightQuestions;
     }
 
-    public void setNumberOfRightQuastions(int numberOfRightQuastions) {
-        this.numberOfRightQuastions = numberOfRightQuastions;
+    public void setNumberOfRightQuestions(int numberOfRightQuestions) {
+        this.numberOfRightQuestions = numberOfRightQuestions;
     }
 
     public Question[] getArrOfQuestions() {

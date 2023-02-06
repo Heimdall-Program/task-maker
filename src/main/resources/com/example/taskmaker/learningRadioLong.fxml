@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taskmaker.Controllers.learning">
+    <Label fx:id="task" layoutX="60.0" layoutY="38.0" text="Оформлен ли этот вопрос?">
+        <font>
+            <Font size="24.0"/>
+        </font>
+    </Label>
+    <RadioButton fx:id="radioButton1" layoutX="95.0" layoutY="100.0" mnemonicParsing="false" text="RadioButton">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </RadioButton>
+    <RadioButton fx:id="radioButton2" layoutX="95.0" layoutY="151.0" mnemonicParsing="false" text="RadioButton">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </RadioButton>
+    <RadioButton fx:id="radioButton3" layoutX="95.0" layoutY="200.0" mnemonicParsing="false" text="RadioButton">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </RadioButton>
+    <RadioButton fx:id="radioButton4" layoutX="95.0" layoutY="253.0" mnemonicParsing="false" text="RadioButton">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </RadioButton>
+    <Button fx:id="back" layoutX="52.0" layoutY="324.0" mnemonicParsing="false" onAction="#backButton" text="Назад"/>
+    <Button fx:id="next" layoutX="422.0" layoutY="329.0" mnemonicParsing="false" onAction="#nextButton"
+            text="Следующий"/>
+    <Label fx:id="listing" layoutX="278.0" layoutY="334.0" text="x/y">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </Label>
+</AnchorPane>
