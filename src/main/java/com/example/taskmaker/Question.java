@@ -4,13 +4,22 @@ public class Question {
     int number;
     String title;
     String description;
+    String[] answers;
     int[] correctAnswers;
 
-    public Question(int number, String title, String description, int[] correctAnswers) {
+    public Question(int number, String title, String[] answers, int[] correctAnswers) {
         this.number = number;
         this.title = title;
-        this.description = description;
+        this.answers = answers;
         this.correctAnswers = correctAnswers;
+    }
+
+    public String[] getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(String[] answers) {
+        this.answers = answers;
     }
 
     public int getNumber() {

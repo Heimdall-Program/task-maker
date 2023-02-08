@@ -1,9 +1,14 @@
 package com.example.taskmaker;
 
 public class Test {
+    public static int thisKol;
+    public static int onlineKol;
+    public static Question[] thisArr;
     int kol;
     int numberOfRightQuestions;
     Question[] arrOfQuestions;
+
+
     int idtests;
     String name;
     String type;

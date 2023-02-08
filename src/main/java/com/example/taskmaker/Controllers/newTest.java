@@ -1,9 +1,12 @@
 package com.example.taskmaker.Controllers;
 
+import com.example.taskmaker.Question;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 import static com.example.taskmaker.Main.openNewScene;
+import static com.example.taskmaker.Test.*;
+
 
 public class newTest {
 
@@ -67,7 +70,11 @@ public class newTest {
             flag = false;
         }
         if (flag) {
-            //переход к заполнению теста
+            thisArr = null;
+            thisKol = Integer.parseInt(numberOfQuestions.getText().trim());
+            thisArr = new Question[thisKol];
+            openNewScene("newRadioLong.fxml", "Добавление вопроса в тест");
+            nextButton.getScene().getWindow().hide();
         }
 
     }
