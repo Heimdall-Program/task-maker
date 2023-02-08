@@ -73,6 +73,10 @@ public class newTest {
             thisArr = null;
             thisKol = Integer.parseInt(numberOfQuestions.getText().trim());
             thisArr = new Question[thisKol];
+            thisCategory = category.getText().trim();
+            thisTheme = theme.getText().trim();
+            if (yesRadio.isSelected()) thisSorted = "Yes";
+            else thisSorted = "No";
             openNewScene("newRadioLong.fxml", "Добавление вопроса в тест");
             nextButton.getScene().getWindow().hide();
         }

@@ -2,12 +2,13 @@ package com.example.taskmaker;
 
 public class Test {
     public static int thisKol;
-    public static int onlineKol;
+    public static String thisTheme;
+    public static String thisCategory;
     public static Question[] thisArr;
+    public static String thisSorted;
     int kol;
     int numberOfRightQuestions;
     Question[] arrOfQuestions;
-
 
     int idtests;
     String name;

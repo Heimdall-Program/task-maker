@@ -3,7 +3,7 @@ package com.example.taskmaker;
 public class Question {
     int number;
     String title;
-    String description;
+
     String[] answers;
     int[] correctAnswers;
 
@@ -38,13 +38,6 @@ public class Question {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     public int[] getCorrectAnswers() {
         return correctAnswers;

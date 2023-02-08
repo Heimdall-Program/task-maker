@@ -20,10 +20,10 @@
             <Font size="16.0" />
         </font>
     </Label>
-    <ToggleButton fx:id="Toggle1" layoutX="492.0" layoutY="120.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Верно" />
-    <ToggleButton fx:id="Toggle2" layoutX="492.0" layoutY="173.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Верно" />
-    <ToggleButton fx:id="Toggle3" layoutX="492.0" layoutY="223.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Верно" />
-    <ToggleButton fx:id="Toggle4" layoutX="492.0" layoutY="271.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Верно" />
+    <ToggleButton fx:id="Toggle1" layoutX="492.0" layoutY="120.0" mnemonicParsing="false" onAction="#ToggleHandler1" prefHeight="26.0" prefWidth="80.0" text="Верно" />
+    <ToggleButton fx:id="Toggle2" layoutX="492.0" layoutY="173.0" mnemonicParsing="false" onAction="#ToggleHandler2" prefHeight="26.0" prefWidth="80.0" text="Верно" />
+    <ToggleButton fx:id="Toggle3" layoutX="492.0" layoutY="223.0" mnemonicParsing="false" onAction="#ToggleHandler3" prefHeight="26.0" prefWidth="80.0" text="Верно" />
+    <ToggleButton fx:id="Toggle4" layoutX="492.0" layoutY="271.0" mnemonicParsing="false" onAction="#ToggleHandler4" prefHeight="26.0" prefWidth="80.0" text="Верно" />
     <TextField fx:id="enterAnswer1" layoutX="57.0" layoutY="120.0" prefHeight="26.0" prefWidth="402.0" promptText="Введите 1-й вариант ответа" />
     <TextField fx:id="enterAnswer2" layoutX="57.0" layoutY="173.0" prefHeight="26.0" prefWidth="402.0" promptText="Введите 2-й вариант ответа" />
     <TextField fx:id="enterAnswer3" layoutX="57.0" layoutY="223.0" prefHeight="26.0" prefWidth="402.0" promptText="Введите 3-й вариант ответа" />
