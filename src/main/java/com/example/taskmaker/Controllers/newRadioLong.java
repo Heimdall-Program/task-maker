@@ -1,9 +1,7 @@
 package com.example.taskmaker.Controllers;
 
-import com.example.taskmaker.DatabaseHandler;
 import com.example.taskmaker.Question;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
@@ -12,11 +10,10 @@ import java.sql.SQLException;
 import java.util.Arrays;
 
 import static com.example.taskmaker.DatabaseHandler.newTestMaking;
-import static com.example.taskmaker.Main.openNewScene;
+import static com.example.taskmaker.Main.setNewScene;
 import static com.example.taskmaker.Test.*;
 
 public class newRadioLong {
-
 
     int kol;
     @FXML
@@ -27,8 +24,6 @@ public class newRadioLong {
     private ToggleButton Toggle3;
     @FXML
     private ToggleButton Toggle4;
-    @FXML
-    private Button back;
     @FXML
     private TextField enterAnswer1;
     @FXML
@@ -41,8 +36,6 @@ public class newRadioLong {
     private TextField enterQuestion;
     @FXML
     private Label listing;
-    @FXML
-    private Button next;
     @FXML
     private Label task;
 
@@ -80,8 +73,7 @@ public class newRadioLong {
         if (kol == -1) {
             thisArr = null;
             thisKol = 0;
-            openNewScene("newTest.fxml", "Новый тест");
-            back.getScene().getWindow().hide();
+            setNewScene("newTest.fxml", "Новый тест");
         }
 
     }
@@ -107,11 +99,11 @@ public class newRadioLong {
 //        enterAnswer3.setText(thisArr[kol].getAnswers()[2]);
 //        enterAnswer4.setText(thisArr[kol].getAnswers()[3]);
         //Защита на случай пустоты
-        enterQuestion.setText("");
-        enterAnswer1.setText("");
-        enterAnswer2.setText("");
-        enterAnswer3.setText("");
-        enterAnswer4.setText("");
+        enterQuestion.clear();
+        enterAnswer1.clear();
+        enterAnswer2.clear();
+        enterAnswer3.clear();
+        enterAnswer4.clear();
         Toggle1.setSelected(false);
         Toggle2.setSelected(false);
         Toggle3.setSelected(false);
@@ -136,8 +128,7 @@ public class newRadioLong {
             thisTheme = null;
             thisCategory = null;
             thisSorted = null;
-            openNewScene("testCorrection.fxml", "Новый тест");
-            next.getScene().getWindow().hide();
+            setNewScene("testCorrection.fxml", "Новый тест");
         }
 
     }

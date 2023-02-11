@@ -3,29 +3,18 @@ package com.example.taskmaker.Controllers;
 import com.example.taskmaker.DatabaseHandler;
 import com.example.taskmaker.Test;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.SQLException;
 
-import static com.example.taskmaker.Main.openNewScene;
+import static com.example.taskmaker.Main.setNewScene;
 
 public class testCorrect {
 
-
-    @FXML
-    private Button backButton;
-
     @FXML
     private TableColumn<?, ?> category;
-
-    @FXML
-    private Button chooseButton;
-
-    @FXML
-    private Button createTest;
 
     @FXML
     private TableColumn<?, ?> idtests;
@@ -44,8 +33,7 @@ public class testCorrect {
 
     @FXML
     void back() {
-        openNewScene("startWindow.fxml", "Тесты");
-        backButton.getScene().getWindow().hide();
+        setNewScene("startWindow.fxml", "Тесты");
     }
 
     @FXML
@@ -55,8 +43,7 @@ public class testCorrect {
 
     @FXML
     void createTest() {
-        openNewScene("newTest.fxml", "Создание нового теста");
-        createTest.getScene().getWindow().hide();
+        setNewScene("newTest.fxml", "Создание нового теста");
     }
 
     public void UpdateTable() throws SQLException, ClassNotFoundException {

@@ -2,22 +2,14 @@ package com.example.taskmaker.Controllers;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 
-import static com.example.taskmaker.Main.openNewScene;
+import static com.example.taskmaker.Main.setNewScene;
 
 public class startWindow {
 
     @FXML
-    private Button correctButton;
-
-    @FXML
-    private Button teachButton;
-
-    @FXML
     void correct() {
-        correctButton.getScene().getWindow().hide();
-        openNewScene("testCorrection.fxml", " Редактирование");
+        setNewScene("testCorrection.fxml", " Редактирование");
     }
 
     @FXML
@@ -27,8 +19,7 @@ public class startWindow {
 
     @FXML
     void teach() {
-        teachButton.getScene().getWindow().hide();
-        openNewScene("testSelection.fxml", "Учёба");
+        setNewScene("testSelection.fxml", "Учёба");
     }
 
 }

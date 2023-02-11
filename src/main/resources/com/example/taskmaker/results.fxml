@@ -26,6 +26,6 @@
             <Font size="20.0"/>
         </font>
     </Label>
-    <Button fx:id="menu" layoutX="395.0" layoutY="480.0" mnemonicParsing="false" onAction="#menuButton"
+    <Button layoutX="395.0" layoutY="480.0" mnemonicParsing="false" onAction="#menuButton"
             text="Меню"/>
 </AnchorPane>

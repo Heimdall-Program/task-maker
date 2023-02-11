@@ -2,23 +2,19 @@ package com.example.taskmaker.Controllers;
 
 import com.example.taskmaker.Question;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 
-import static com.example.taskmaker.Main.openNewScene;
+import static com.example.taskmaker.Main.setNewScene;
 import static com.example.taskmaker.Test.*;
 
 
 public class newTest {
 
-
-    @FXML
-    private Button backButton;
-
     @FXML
     private TextField category;
-
-    @FXML
-    private Button nextButton;
 
     @FXML
     private RadioButton noRadio;
@@ -36,8 +32,7 @@ public class newTest {
 
     @FXML
     void back() {
-        openNewScene("testCorrection.fxml", "Редактирование тестов");
-        backButton.getScene().getWindow().hide();
+        setNewScene("testCorrection.fxml", "Редактирование тестов");
     }
 
     public boolean isInt(String str) {
@@ -77,8 +72,7 @@ public class newTest {
             thisTheme = theme.getText().trim();
             if (yesRadio.isSelected()) thisSorted = "Yes";
             else thisSorted = "No";
-            openNewScene("newRadioLong.fxml", "Добавление вопроса в тест");
-            nextButton.getScene().getWindow().hide();
+            setNewScene("newRadioLong.fxml", "Добавление вопроса в тест");
         }
 
     }

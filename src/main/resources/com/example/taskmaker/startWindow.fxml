@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0"
-            prefWidth="355.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/19"
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="725.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/19"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taskmaker.Controllers.startWindow">
     <cursor>
         <Cursor fx:constant="DEFAULT"/>
     </cursor>
-    <Button fx:id="teachButton" layoutX="78.0" layoutY="115.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false"
-            onAction="#teach" text="Учиться">
+    <Button layoutX="78.0" layoutY="115.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#teach"
+            text="Учиться">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button fx:id="correctButton" layoutX="78.0" layoutY="191.0" minHeight="40.0" minWidth="200.0"
-            mnemonicParsing="false" onAction="#correct" text="Корректировать тесты">
+    <Button layoutX="78.0" layoutY="191.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#correct"
+            text="Корректировать тесты">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button layoutX="78.0" layoutY="267.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#exit"
+    <Button layoutX="263.0" layoutY="303.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#exit"
             text="Выход">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Label layoutX="146.0" layoutY="45.0" text="Тесты">
+    <Label layoutX="331.0" layoutY="25.0" text="Тесты">
         <font>
             <Font size="24.0"/>
         </font>
     </Label>
+    <Button layoutX="442.0" layoutY="115.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#teach"
+            text="Случайный тест">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+    <Button layoutX="442.0" layoutY="191.0" minHeight="40.0" minWidth="200.0" mnemonicParsing="false" onAction="#teach"
+            text="Сообщение об ошибке">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
 </AnchorPane>
