@@ -1,11 +1,11 @@
-package com.example.taskmaker.Controllers;
+package com.example.TaskMaker.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 
-public class learning {
+public class LearningController {
 
     @FXML
     private Label listing;

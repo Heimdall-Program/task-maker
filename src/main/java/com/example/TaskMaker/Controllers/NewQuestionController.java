@@ -1,6 +1,9 @@
-package com.example.taskmaker.Controllers;
+package com.example.TaskMaker.Controllers;
 
-import com.example.taskmaker.Question;
+import com.example.TaskMaker.DatabaseHandler;
+import com.example.TaskMaker.Main;
+import com.example.TaskMaker.Question;
+import com.example.TaskMaker.Test;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -9,11 +12,7 @@ import javafx.scene.control.ToggleButton;
 import java.sql.SQLException;
 import java.util.Arrays;
 
-import static com.example.taskmaker.DatabaseHandler.newTestMaking;
-import static com.example.taskmaker.Main.setNewScene;
-import static com.example.taskmaker.Test.*;
-
-public class newRadioLong {
+public class NewQuestionController {
 
     int kol;
     @FXML
@@ -68,12 +67,12 @@ public class newRadioLong {
         correctingInfo();
         kol--;
         task.setText("Добавление вопроса №" + (kol + 1));
-        listing.setText(kol + "/" + thisKol);
+        listing.setText(kol + "/" + Test.thisKol);
 
         if (kol == -1) {
-            thisArr = null;
-            thisKol = 0;
-            setNewScene("newTest.fxml", "Новый тест");
+            Test.thisArr = null;
+            Test.thisKol = 0;
+            Main.setNewScene("NewTest.fxml", "Новый тест");
         }
 
     }
@@ -91,8 +90,8 @@ public class newRadioLong {
         if (Toggle3.isSelected()) correctAnswers[2] = 1;
         if (Toggle4.isSelected()) correctAnswers[3] = 1;
         System.out.println(kol);
-        thisArr[kol] = new Question(thisKol, enterQuestion.getText().trim(), answers, correctAnswers);
-        System.out.println(thisArr[kol].getTitle() + Arrays.toString(thisArr[kol].getAnswers()) + Arrays.toString(thisArr[kol].getCorrectAnswers()));
+        Test.thisArr[kol] = new Question(Test.thisKol, enterQuestion.getText().trim(), answers, correctAnswers);
+        System.out.println(Test.thisArr[kol].getTitle() + Arrays.toString(Test.thisArr[kol].getAnswers()) + Arrays.toString(Test.thisArr[kol].getCorrectAnswers()));
 //         enterQuestion.setText(thisArr[kol].getTitle());
 //        enterAnswer1.setText(thisArr[kol].getAnswers()[0]);
 //        enterAnswer2.setText(thisArr[kol].getAnswers()[1]);
@@ -119,16 +118,16 @@ public class newRadioLong {
         correctingInfo();
         kol++;
         task.setText("Добавление вопроса №" + (kol + 1));
-        listing.setText(kol + 1 + "/" + thisKol);
+        listing.setText(kol + 1 + "/" + Test.thisKol);
 
-        if (kol == thisKol) {
-            newTestMaking();
+        if (kol == Test.thisKol) {
+            DatabaseHandler.newTestMaking();
 
-            thisArr = null;
-            thisTheme = null;
-            thisCategory = null;
-            thisSorted = null;
-            setNewScene("testCorrection.fxml", "Новый тест");
+            Test.thisArr = null;
+            Test.thisTheme = null;
+            Test.thisCategory = null;
+            Test.thisSorted = null;
+            Main.setNewScene("TestCorrection.fxml", "Новый тест");
         }
 
     }
@@ -137,7 +136,7 @@ public class newRadioLong {
     void initialize() {
         kol = 0;
         task.setText("Добавление вопроса №" + (kol + 1));
-        listing.setText(kol + 1 + "/" + thisKol);
+        listing.setText(kol + 1 + "/" + Test.thisKol);
     }
 
 }

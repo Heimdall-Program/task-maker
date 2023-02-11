@@ -1,4 +1,4 @@
-package com.example.taskmaker;
+package com.example.TaskMaker;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Main extends Application {
-    static Stage stage1;
+    static Stage singleStage;
 
     public static void main(String[] args) {
         launch();
@@ -25,19 +25,19 @@ public class Main extends Application {
             e.printStackTrace();
         }
         Parent root = loader.getRoot();
-        stage1.setTitle(title);
+        singleStage.setTitle(title);
         //stage.getIcons().add(new Image((Objects.requireNonNull(Main.class.getResourceAsStream("image/logo.png")))));
-        stage1.setScene(new Scene(root));
-        stage1.show();
+        singleStage.setScene(new Scene(root));
+        singleStage.show();
     }
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("startWindow.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainWindow.fxml")));
         Scene scene = new Scene(root);
-        stage1 = stage;
-        stage1.setTitle("Тесты");
-        stage1.setScene(scene);
-        stage1.show();
+        singleStage = stage;
+        singleStage.setTitle("Тесты");
+        singleStage.setScene(scene);
+        singleStage.show();
     }
 }

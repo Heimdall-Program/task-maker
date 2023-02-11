@@ -1,4 +1,4 @@
-package com.example.taskmaker;
+package com.example.TaskMaker;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -6,7 +6,8 @@ import javafx.collections.ObservableList;
 import java.sql.*;
 import java.util.Arrays;
 
-import static com.example.taskmaker.Test.*;
+import static com.example.TaskMaker.Test.*;
+
 
 public class DatabaseHandler {
     public static Connection getDbConnection() throws SQLException {

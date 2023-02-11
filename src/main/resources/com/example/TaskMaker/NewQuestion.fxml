@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <AnchorPane prefHeight="400.0" prefWidth="725.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taskmaker.Controllers.newRadioLong">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="TaskMaker.Controllers.NewQuestionController">
     <Label fx:id="task" layoutX="228.0" layoutY="14.0" text="Добавление вопроса №">
         <font>
             <Font size="24.0"/>

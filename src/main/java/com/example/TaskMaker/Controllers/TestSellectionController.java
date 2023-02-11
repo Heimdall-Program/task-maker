@@ -1,7 +1,7 @@
-package com.example.taskmaker.Controllers;
+package com.example.TaskMaker.Controllers;
 
-import com.example.taskmaker.DatabaseHandler;
-import com.example.taskmaker.Test;
+import com.example.TaskMaker.DatabaseHandler;
+import com.example.TaskMaker.Test;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,9 +12,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.SQLException;
 
-import static com.example.taskmaker.Main.setNewScene;
+import static com.example.TaskMaker.Main.setNewScene;
 
-public class testSellect {
+public class TestSellectionController {
 
     @FXML
     private ComboBox<String> Combo;
@@ -32,13 +32,13 @@ public class testSellect {
 
     @FXML
     void back() {
-        setNewScene("startWindow.fxml", "Тесты");
+        setNewScene("MainWindow.fxml", "Тесты");
     }
 
     @FXML
     void choose() {
         //сохранение в static переменную нажатого теста. Переход, только если выбран тест.
-        setNewScene("startWindow.fxml", "");//поставить название конкретного теста
+        setNewScene("MainWindow.fxml", "");//поставить название конкретного теста
     }
 
     public void UpdateTable() throws SQLException, ClassNotFoundException {

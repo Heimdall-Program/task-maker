@@ -1,4 +1,4 @@
-package com.example.taskmaker;
+package com.example.TaskMaker;
 
 public class Test {
     public static int thisKol;

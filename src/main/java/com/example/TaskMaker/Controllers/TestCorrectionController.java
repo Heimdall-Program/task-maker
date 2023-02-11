@@ -1,7 +1,7 @@
-package com.example.taskmaker.Controllers;
+package com.example.TaskMaker.Controllers;
 
-import com.example.taskmaker.DatabaseHandler;
-import com.example.taskmaker.Test;
+import com.example.TaskMaker.DatabaseHandler;
+import com.example.TaskMaker.Test;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -9,9 +9,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.SQLException;
 
-import static com.example.taskmaker.Main.setNewScene;
+import static com.example.TaskMaker.Main.setNewScene;
 
-public class testCorrect {
+public class TestCorrectionController {
 
     @FXML
     private TableColumn<?, ?> category;
@@ -33,7 +33,7 @@ public class testCorrect {
 
     @FXML
     void back() {
-        setNewScene("startWindow.fxml", "Тесты");
+        setNewScene("MainWindow.fxml", "Тесты");
     }
 
     @FXML
@@ -43,7 +43,7 @@ public class testCorrect {
 
     @FXML
     void createTest() {
-        setNewScene("newTest.fxml", "Создание нового теста");
+        setNewScene("NewTest.fxml", "Создание нового теста");
     }
 
     public void UpdateTable() throws SQLException, ClassNotFoundException {

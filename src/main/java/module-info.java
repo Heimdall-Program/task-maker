@@ -5,8 +5,8 @@ module com.example.taskmaker {
     requires mysql.connector.java;
 
 
-    opens com.example.taskmaker to javafx.fxml;
-    exports com.example.taskmaker;
-    exports com.example.taskmaker.Controllers;
-    opens com.example.taskmaker.Controllers to javafx.fxml;
+    opens com.example.TaskMaker to javafx.fxml;
+    exports com.example.TaskMaker;
+    exports com.example.TaskMaker.Controllers;
+    opens com.example.TaskMaker.Controllers to javafx.fxml;
 }

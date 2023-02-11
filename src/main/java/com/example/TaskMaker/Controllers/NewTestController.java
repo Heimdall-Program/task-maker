@@ -1,17 +1,16 @@
-package com.example.taskmaker.Controllers;
+package com.example.TaskMaker.Controllers;
 
-import com.example.taskmaker.Question;
+import com.example.TaskMaker.Main;
+import com.example.TaskMaker.Question;
+import com.example.TaskMaker.Test;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 
-import static com.example.taskmaker.Main.setNewScene;
-import static com.example.taskmaker.Test.*;
 
-
-public class newTest {
+public class NewTestController {
 
     @FXML
     private TextField category;
@@ -32,7 +31,7 @@ public class newTest {
 
     @FXML
     void back() {
-        setNewScene("testCorrection.fxml", "Редактирование тестов");
+        Main.setNewScene("TestCorrection.fxml", "Редактирование тестов");
     }
 
     public boolean isInt(String str) {
@@ -65,14 +64,14 @@ public class newTest {
             flag = false;
         }
         if (flag) {
-            thisArr = null;
-            thisKol = Integer.parseInt(numberOfQuestions.getText().trim());
-            thisArr = new Question[thisKol];
-            thisCategory = category.getText().trim();
-            thisTheme = theme.getText().trim();
-            if (yesRadio.isSelected()) thisSorted = "Yes";
-            else thisSorted = "No";
-            setNewScene("newRadioLong.fxml", "Добавление вопроса в тест");
+            Test.thisArr = null;
+            Test.thisKol = Integer.parseInt(numberOfQuestions.getText().trim());
+            Test.thisArr = new Question[Test.thisKol];
+            Test.thisCategory = category.getText().trim();
+            Test.thisTheme = theme.getText().trim();
+            if (yesRadio.isSelected()) Test.thisSorted = "Yes";
+            else Test.thisSorted = "No";
+            Main.setNewScene("NewQuestion.fxml", "Добавление вопроса в тест");
         }
 
     }

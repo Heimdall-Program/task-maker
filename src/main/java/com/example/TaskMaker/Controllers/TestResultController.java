@@ -1,11 +1,11 @@
-package com.example.taskmaker.Controllers;
+package com.example.TaskMaker.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class testResult {
+public class TestResultController {
 
 
     @FXML
