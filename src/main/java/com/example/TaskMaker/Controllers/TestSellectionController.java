@@ -4,6 +4,7 @@ import com.example.TaskMaker.DatabaseHandler;
 import com.example.TaskMaker.Test;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
@@ -12,9 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.SQLException;
 
-import static com.example.TaskMaker.Main.setNewScene;
-
-public class TestSellectionController {
+public class TestSellectionController extends BaseController {
 
     @FXML
     private ComboBox<String> Combo;
@@ -31,17 +30,17 @@ public class TestSellectionController {
     private TableColumn<?, ?> issorted;
 
     @FXML
-    void back() {
-        setNewScene("MainWindow.fxml", "Тесты");
+    void back(ActionEvent event) {
+        changeScene("MainWindow.fxml", "Тесты", event);
     }
 
     @FXML
-    void choose() {
+    void choose(ActionEvent event) {
         //сохранение в static переменную нажатого теста. Переход, только если выбран тест.
-        setNewScene("MainWindow.fxml", "");//поставить название конкретного теста
+        changeScene("MainWindow.fxml", "", event);//поставить название конкретного теста
     }
 
-    public void UpdateTable() throws SQLException, ClassNotFoundException {
+    public void UpdateTable() throws SQLException {
         idtests.setCellValueFactory(new PropertyValueFactory<>("idtests"));
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         kol.setCellValueFactory(new PropertyValueFactory<>("kol"));
@@ -50,7 +49,7 @@ public class TestSellectionController {
     }
 
     @FXML
-    void initialize() throws SQLException, ClassNotFoundException {
+    void initialize() throws SQLException {
 
         ObservableList<String> list = FXCollections.observableArrayList("Apple", "Banana", "Orange");
         Combo.setItems(list);

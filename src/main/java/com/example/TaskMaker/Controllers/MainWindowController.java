@@ -1,15 +1,14 @@
 package com.example.TaskMaker.Controllers;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-import static com.example.TaskMaker.Main.setNewScene;
-
-public class MainWindowController {
+public class MainWindowController extends BaseController {
 
     @FXML
-    void correct() {
-        setNewScene("TestCorrection.fxml", " Редактирование");
+    void correct(ActionEvent event) {
+        changeScene("TestCorrection.fxml", " Редактирование", event);
     }
 
     @FXML
@@ -18,8 +17,8 @@ public class MainWindowController {
     }
 
     @FXML
-    void teach() {
-        setNewScene("TestSelection.fxml", "Учёба");
+    void teach(ActionEvent event) {
+        changeScene("TestSelection.fxml", "Учёба", event);
     }
 
 }

@@ -1,18 +1,17 @@
 package com.example.TaskMaker.Controllers;
 
 import com.example.TaskMaker.DatabaseHandler;
-import com.example.TaskMaker.Main;
 import com.example.TaskMaker.Question;
 import com.example.TaskMaker.Test;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 
 import java.sql.SQLException;
-import java.util.Arrays;
 
-public class NewQuestionController {
+public class NewQuestionController extends BaseController {
 
     int kol;
     @FXML
@@ -63,7 +62,7 @@ public class NewQuestionController {
     }
 
     @FXML
-    void backButton() {
+    void backButton(ActionEvent event) {
         correctingInfo();
         kol--;
         task.setText("Добавление вопроса №" + (kol + 1));
@@ -72,7 +71,7 @@ public class NewQuestionController {
         if (kol == -1) {
             Test.thisArr = null;
             Test.thisKol = 0;
-            Main.setNewScene("NewTest.fxml", "Новый тест");
+            changeScene("NewTest.fxml", "Новый тест", event);
         }
 
     }
@@ -91,7 +90,6 @@ public class NewQuestionController {
         if (Toggle4.isSelected()) correctAnswers[3] = 1;
         System.out.println(kol);
         Test.thisArr[kol] = new Question(Test.thisKol, enterQuestion.getText().trim(), answers, correctAnswers);
-        System.out.println(Test.thisArr[kol].getTitle() + Arrays.toString(Test.thisArr[kol].getAnswers()) + Arrays.toString(Test.thisArr[kol].getCorrectAnswers()));
 //         enterQuestion.setText(thisArr[kol].getTitle());
 //        enterAnswer1.setText(thisArr[kol].getAnswers()[0]);
 //        enterAnswer2.setText(thisArr[kol].getAnswers()[1]);
@@ -114,7 +112,7 @@ public class NewQuestionController {
     }
 
     @FXML
-    void nextButton() throws SQLException {
+    void nextButton(ActionEvent event) throws SQLException {
         correctingInfo();
         kol++;
         task.setText("Добавление вопроса №" + (kol + 1));
@@ -122,12 +120,11 @@ public class NewQuestionController {
 
         if (kol == Test.thisKol) {
             DatabaseHandler.newTestMaking();
-
             Test.thisArr = null;
             Test.thisTheme = null;
             Test.thisCategory = null;
             Test.thisSorted = null;
-            Main.setNewScene("TestCorrection.fxml", "Новый тест");
+            changeScene("TestCorrection.fxml", "Новый тест", event);
         }
 
     }

@@ -1,8 +1,8 @@
 package com.example.TaskMaker.Controllers;
 
-import com.example.TaskMaker.Main;
 import com.example.TaskMaker.Question;
 import com.example.TaskMaker.Test;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 
 
-public class NewTestController {
+public class NewTestController extends BaseController {
 
     @FXML
     private TextField category;
@@ -30,8 +30,8 @@ public class NewTestController {
     private RadioButton yesRadio;
 
     @FXML
-    void back() {
-        Main.setNewScene("TestCorrection.fxml", "Редактирование тестов");
+    void back(ActionEvent event) {
+        changeScene("TestCorrection.fxml", "Редактирование тестов", event);
     }
 
     public boolean isInt(String str) {
@@ -44,7 +44,7 @@ public class NewTestController {
     }
 
     @FXML
-    void next() {
+    void next(ActionEvent event) {
         boolean flag = true;
         errorAllarm.setText("");
         if (theme.getText().trim().equals("")) {
@@ -71,7 +71,7 @@ public class NewTestController {
             Test.thisTheme = theme.getText().trim();
             if (yesRadio.isSelected()) Test.thisSorted = "Yes";
             else Test.thisSorted = "No";
-            Main.setNewScene("NewQuestion.fxml", "Добавление вопроса в тест");
+            changeScene("NewQuestion.fxml", "Добавление вопроса в тест", event);
         }
 
     }
